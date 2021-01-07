@@ -1,0 +1,53 @@
+// Menu Button
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include easeOut;
+
+    .btn-line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: #fff;
+        @include easeOut;
+        border-radius: 5px;
+    }
+
+    .btn-close {
+        width: 0px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: #fff;
+        @include easeOut;
+        border-radius: 5px;
+
+        &:nth-child(4) {
+            position: relative;
+            top: -17px;
+            right: 0px;
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(5) {
+            position: relative;
+            top: -25px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    // Turn hamburger menu into an X
+    &.close {
+        .btn-line {
+            transform: scalex(0) translate(50px);
+        }
+
+        .btn-close {
+            width: 28px;
+        }
+    }
+
+
+}
