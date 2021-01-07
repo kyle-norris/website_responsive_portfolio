@@ -11,7 +11,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: $text-color;
         @include easeOut;
         border-radius: 5px;
     }
@@ -20,7 +20,7 @@
         width: 0px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: $text-color;
         @include easeOut;
         border-radius: 5px;
 
@@ -131,7 +131,7 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 400;
-        color: #fff;
+        color: $text-color;
         text-decoration: none;
         @include easeOut;
 
