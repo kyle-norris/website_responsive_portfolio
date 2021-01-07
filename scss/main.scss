@@ -1,0 +1,71 @@
+@import 'config';
+
+* {
+    box-sizing: border-box; // makes it so padding doesn't affect width or height of boxes
+}
+
+body {
+    @include background;
+    background: $primary-color;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+// Headings
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5); //The 'lighten' is to give this text a background. The 'rgba' is used to make it slightly transparent.
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2; // How close the element is to YOU (bigger number means closer to you)
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+main {
+    padding: 4rem;
+    height: 100%;
+
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut(0.5s);
+            }
+        }
+    }
+
+    &#home {
+        overflow: hidden; //We don't want any scroll bars on home page
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
